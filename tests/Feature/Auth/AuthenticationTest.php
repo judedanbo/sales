@@ -8,6 +8,7 @@ uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
 
 test('login screen can be rendered', function () {
     $response = $this->get(route('login'));
+    dd($response->getContent());
 
     $response->assertStatus(200);
 });
